@@ -40,12 +40,9 @@ describe('LoginComponent', () => {
   });
 
   it('form should be invalid', async(() => {
-    component.email.setValue("dddd");
-    // component.loginForm.controls['email'].setValue('');
-    // component.loginForm.controls['password'].setValue('');
-    // component.email.value("d");
-    // expect(component.loginForm.valid).toBeFalsy();
-    expect(component.email.valid).toBeFalsy();
+    component.loginForm.controls['email'].setValue('');
+    component.loginForm.controls['password'].setValue('');
+    expect(component.loginForm.valid).toBeFalsy();
   }));
 
   // it('should create', () => {
