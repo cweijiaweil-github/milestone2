@@ -34,7 +34,7 @@ describe('LoginComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(LoginComponent);
     component = fixture.componentInstance;
-    // fixture.detectChanges();
+    fixture.detectChanges();
     de = fixture.debugElement.query(By.css('form'));
     el = de.nativeElement;
   });
@@ -45,7 +45,24 @@ describe('LoginComponent', () => {
     expect(component.loginForm.valid).toBeFalsy();
   }));
 
-  // it('should create', () => {
-  //   expect(component).toBeTruthy();
-  // });
+  it('form should be vaild', async(() => {
+    component.loginForm.controls['email'].setValue('asd@asd.com');
+    component.loginForm.controls['password'].setValue('aaaaaa');
+    expect(component.loginForm.valid).toBeTruthy();
+  }));
+
+  it('form call the onSubmit method', async(() => {
+    fixture.detectChanges();
+    spyOn(component, 'loginSubmit');
+    el = fixture.debugElement.query(By.css('button')).nativeElement;
+    el.click(); 
+    expect(component.loginSubmit).toHaveBeenCalledTimes(1);
+  }));
+
+  it('should have as info test service', async(() => {
+    const fixture = TestBed.createComponent(LoginComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app.info).toEqual('test service');
+  }));
+
 });

@@ -8,9 +8,12 @@ import {HttpClient,HttpHeaders} from "@angular/common/http";
 export class LoginService {
   
   private headers: Headers;
-
   constructor(private http: HttpClient,public router: Router) { }
 
+  getInfo(): string {
+    return 'test service';
+  }
+  
   onLogin(user:any) {
     const httpOptions = {
       headers: new HttpHeaders({ "Content-Type": "application/json" })
