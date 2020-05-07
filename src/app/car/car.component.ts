@@ -18,10 +18,10 @@ export class CarComponent implements OnInit {
     this.getSum();
   }
   
-  carClick() {
-    this.findAllCar();
-    this.getSum();
-  }
+  // carClick() {
+  //   this.findAllCar();
+  //   this.getSum();
+  // }
 
   findAllCar(){
     this.sumMoney = 0;
