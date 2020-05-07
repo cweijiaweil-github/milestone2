@@ -11,7 +11,6 @@ import { HomeComponent } from './home/home.component';
 import { EqualValidator } from './equal-validator.directive';
 import { BuyerComponent } from './signup/buyer/buyer.component';
 import { SellerComponent } from './signup/seller/seller.component';
-import { AdminComponent } from './admin/admin.component';
 import { BuyerMasterComponent } from './buyer-master/buyer-master.component';
 import { SellerMasterComponent } from './seller-master/seller-master.component';
 import { Code404Component } from './common/code404/code404.component';
@@ -19,6 +18,7 @@ import { LoginService } from './services/login.service';
 import { SuccPageComponent } from './signup/succPage/succ-page/succ-page.component';
 import { Code505Component } from './common/code505/code505.component';
 import { Code200Component } from './common/code200/code200.component';
+import { CarComponent } from './car/car.component';
 
 @NgModule({
   declarations: [
@@ -29,13 +29,13 @@ import { Code200Component } from './common/code200/code200.component';
     EqualValidator,
     BuyerComponent,
     SellerComponent,
-    AdminComponent,
     BuyerMasterComponent,
     SellerMasterComponent,
     Code404Component,
     SuccPageComponent,
     Code505Component,
-    Code200Component
+    Code200Component,
+    CarComponent
   ],
   imports: [
     BrowserModule,
